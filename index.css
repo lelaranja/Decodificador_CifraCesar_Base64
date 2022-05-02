@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Mono&family=Ubuntu+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.CCesar{
+    display: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #606c38;
+}
+
+.pai{
+    display: flex;
+    flex-direction: row;
+    padding-top: 3em;
+    padding-bottom: 10em;
+    background-color: #081c15;
+    justify-content: space-evenly;
+}
+/* Definição principal */
+h1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 3em;
+    color: #fefae0;
+    display: flex;
+    background-color: #344e41;
+    justify-content: center;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    color: #a4ac86;
+}
+
+.secundaria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    color: #a4ac86;
+    border-radius: 4em;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8em;
+    color: black;
+    margin-top: 0.6em;
+}
+
+/* Botão - Estética */
+button{
+    border-radius: 6em;
+    background-color: #9d0208;
+    padding: 0.5em;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 15em;
+}
+
+/* Botão - Texto */
+button{
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9em;
+    color: #b7b7a4;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/* Configuração INPUT */
+
+select{
+    height: 2.5em;
+}
+
+.digCod1{
+    height: 2.5em;
+}
