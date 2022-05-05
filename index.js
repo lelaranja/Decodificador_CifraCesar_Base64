@@ -7,6 +7,7 @@ var btnRodar = document.querySelector('#btnRoda');
 var radioBtn = document.querySelector('#radio');
 var codigoInicial = document.querySelector("#digCod").value;
 var passo = document.querySelector("#passoCCesar");
+var caixaSaida = document.querySelector("#resultadoCod");
 
 //Mudar layout - Seleção Cifra de César
 selecao.addEventListener('click', function () {
@@ -37,8 +38,9 @@ deCod.addEventListener('click', function () {
 function codificaCesar(codigoInicial, passo) {
     var saidaTexto = '';
     var nTroca = 0;
-    var resultado = document.querySelector("#resultadoCod");
-    var codigoInicial = document.querySelector("#digCod").value;
+    var codificado
+    // passo = parseInt(passo)
+    // var codigoInicial = document.querySelector("#digCod").value;
     for (var i = 0; i < codigoInicial.length; i++) {
         if ((codigoInicial.charCodeAt(i) >= 65 && codigoInicial.charCodeAt(i) <= 90)) {
             nTroca = (Number(codigoInicial.charCodeAt(i))) - 65;
@@ -54,13 +56,14 @@ function codificaCesar(codigoInicial, passo) {
             saidaTexto += String.fromCharCode(codigoInicial.charCodeAt(i));
         }
     }
-    resultado.innerText = saidaTexto;
+    codificado = saidaTexto;
+    return codificado
 }
 
 function decodificaCesar(codigoInicial, passo) {
     var saidaTexto = '';
     var nTroca = 0;
-    var resultado = document.querySelector("#resultadoCod");
+    var decodificado
     var codigoInicial = document.querySelector("#digCod").value;
     for (var i = 0; i < codigoInicial.length; i++) {
         if ((codigoInicial.charCodeAt(i) >= 65 && codigoInicial.charCodeAt(i) <= 90)) {
@@ -77,7 +80,8 @@ function decodificaCesar(codigoInicial, passo) {
             saidaTexto += String.fromCharCode(codigoInicial.charCodeAt(i));
         }
     }
-    resultado.innerText = saidaTexto;
+    decodificado = saidaTexto;
+    return decodificado
 }
 
 // Função para de/codificação - Base 64
@@ -103,9 +107,9 @@ btnRodar.addEventListener('click', function (e) {
     } else if (selecao.value == '2' && deCod.checked) {
         codificaBase64(codigoInicial)
     } else if (selecao.value == '3' && inCod.checked) {
-        codificaCesar(codigoInicial, passo)
+        caixaSaida.value = codificaCesar(codigoInicial, passo.value)
     } else if (selecao.value == '3' && deCod.checked) {
-        decodificaCesar(codigoInicial, passo)
+        caixaSaida.value = decodificaCesar(codigoInicial, passo.value)
     } else {
         alert('Preencha todas as informações corretamente')
     }
