@@ -56,13 +56,30 @@ h1 {
 /* Footer */
 footer{
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     justify-content: center;
     align-items: center;
     font-family: 'Space Mono', monospace;
     font-size: 0.8em;
     color: black;
     margin-top: 0.6em;
+}
+.txtFooter{
+    display: flex;
+    flex-direction: column;
+    flex-direction: center;
+    align-items: center;
+}
+
+.gitHub{
+    margin-right: 5em;
+}
+.linkeDin{
+    margin-left: 5em;
+}
+img{
+    height: 3em;
+    width: 3em;
 }
 
 /* Botão - Estética */
